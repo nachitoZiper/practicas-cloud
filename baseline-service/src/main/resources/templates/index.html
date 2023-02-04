@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+
+    </head>
+    <body>
+        <div class="container">
+            <main>
+                <div class="col-12 text-center">
+                    <h4 class="mb-3">Calculo de Inversi&oacute;n</h4>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="inversionInicial" class="form-label">Inversi&oacute;n Inicial</label>
+                        <input type="number" class="form-control" id="inversioninicialId" min="1000" required=""value="1000">
+                        <div class="invalid-feedback">
+                            Inversi&oacute;n Inicial
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="aportacionAnual" class="form-label">Aportaci&oacute;n Anual</label>
+                        <input type="number" class="form-control" id="aportacionAnualId" min="0" required=""value="0">
+                        <div class="invalid-feedback">
+                            Aportaci&oacute;n Anual
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <label for="Incremento Anual" class="form-label">% Incremento Anual</label>
+                        <input type="number" class="form-control" id="incremewntoAnualId" min="0" required=""value="0">
+                        <div class="invalid-feedback">
+                            % Incremento Anual
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="aniosInversion" class="form-label">a&ntilde;os de Inversi&oacute;n</label>
+                        <input type="number" class="form-control" id="aniosInversionId" min="1000" required="1"value="1">
+                        <div class="invalid-feedback">
+                            a&ntilde;os de Inversi&oacute;n
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <label for="rendimiento" class="form-label">% Rendimiento</label>
+                        <input type="number" class="form-control" id="rendimientoId" min="1000" required="1"value="1">
+                        <div class="invalid-feedback">
+                            % Rendimiento
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <hr class="my-4"></hr>
+                    <div class="col-6" >
+                        <button class="btn btn-primary btn-lg" id="btnCalcular">Calcular Inversi&oacute;n</button>  
+                    </div>
+                </div>
+
+
+
+                <div class="row text-center" >
+                    <div class="col-12">
+                        <hr class="my-4"></hr>
+                    </div>
+
+                    <div class="col-12 row" id="divContent" style="display: none;">
+
+                        <div class="col-6">
+                            <div>
+                                <h6 class="my-0">Ganancia Por Inversi&oacute;n</h6>
+                            </div>
+                            <span class="text-muted" id="ganaciaInversion">$0</span>
+                        </div>
+
+                        <div class="col-6" >
+                            <div>
+                                <h6 class="my-0">Monto Final</h6>
+                            </div>
+                            <span class="text-muted"  id="montoFinal">$0</span>
+                        </div>
+
+                        <div class="col-12" >
+                        <hr class="my-4"></hr>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">A&ntilde;o</th>
+                                        <th scope="col">Saldo Inicial</th>
+                                        <th scope="col">Aportaci&oacute;n</th>
+                                        <th scope="col">Rendimiento</th>
+                                        <th scope="col">Saldo Final</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbodyId">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+        <script th:src="@{/js/jquery-3.6.3.min.js}" /></script>
+    <script th:src="@{/js/script.js}" /></script>
+
+</body>
+</html>
